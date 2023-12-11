@@ -10,7 +10,6 @@ public class AdventureTime {
      */
     public static void main(String[] args) throws IOException {
 
-
     }
 
     /** TODO 1
@@ -22,7 +21,34 @@ public class AdventureTime {
      * @throws IOException
      */
     public static int challengeOne(String fileName) throws IOException {
-        return 0;
+        File file = new File("inputOneTwo.txt");
+        Scanner scanner = new Scanner(file);
+
+        int len = 0;
+        while (scanner.hasNextLine()) {
+            len++;
+            scanner.nextLine();
+        }
+        int[] arr = new int[len];
+        int count = 0;
+        while (scanner.hasNextLine()) {
+            arr[count++] = scanner.nextInt();
+        }
+
+
+        int numoutput = 0;
+        int countt = 0;
+        while(countt<len){
+            int temp = arr[count+1]-arr[count];
+            if(temp>numoutput){
+                numoutput = arr[count+1]-arr[count];
+            }
+        }
+
+
+
+
+
     }
 
     /** TODO 2
@@ -34,7 +60,7 @@ public class AdventureTime {
      * @throws FileNotFoundException
      */
     public static int challengeTwo(String fileName) throws FileNotFoundException {
-        return 0;
+
     }
 
     /** TODO 3
